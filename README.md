@@ -15,17 +15,17 @@ Example run:
 'python twitter-export.py /home/bastian/tweets/data/js/tweets/ gedankenstuecke'
 
 The output contains 7 columns:
-0. source
-1. date
-2. time
-3. user
-4. is this tweet a reply? yes/no (1/0)
-5. is this tweet mentioning the target username? yes/no (1/0)
-6. the tweet's text
-7. latitude
-8. longitude
-9. last latitude
-10. last longitude
+1. source
+2. date
+3. time
+4. user
+5. is this tweet a reply? yes/no (1/0)
+6. is this tweet mentioning the target username? yes/no (1/0)
+7. the tweet's text
+8. latitude
+9. longitude
+10. last latitude
+11. last longitude
 
 ## swarm export
 This script exports your swarm checkins' latitude/longitudes along with the
@@ -41,10 +41,10 @@ Example run:
 'python swarm-export.py MYKEY swarm.json swarm.csv'
 
 The output contains 5 columns
-0. source
-1. date
-2. time
-3. user
+1. source
+2. date
+3. time
+4. user
 5. latitude
 6. longitude
 7. with whom the checkin was
