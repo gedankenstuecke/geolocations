@@ -14,7 +14,8 @@ Example run:
 
 'python twitter-export.py /home/bastian/tweets/data/js/tweets/ gedankenstuecke'
 
-The output contains 7 columns:
+The output contains 11 columns:
+
 1. source
 2. date
 3. time
@@ -40,7 +41,8 @@ Example run:
 
 'python swarm-export.py MYKEY swarm.json swarm.csv'
 
-The output contains 5 columns
+The output contains 9 columns:
+
 1. source
 2. date
 3. time
