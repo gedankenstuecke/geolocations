@@ -25,7 +25,9 @@ plot <- plot + scale_y_continuous(limits=c(min(merged$lat,na.rm=T)-1,max(merged$
 plot <- plot + coord_map()
 plot <- plot + geom_segment(data=merged,aes(y=last_lat,x=last_long,yend=lat,xend=long,color=user,group=NULL),alpha=0.3)
 plot <- plot + theme_tufte()+ theme(text=element_text(family="Helvetica"))
-ggsave("plot_travel_routes.pdf",width=20, height=10)
+ggsave("plot_travel_routes.pdf",width=15, height=5)
+ggsave("plot_travel_routes.png",width=15, height=5)
+
 
 merged$lat_round <- round(merged$lat,digit=2)
 merged$long_round <- round(merged$long,digit=2)
@@ -47,4 +49,5 @@ plot <- plot + geom_point(data=merged_table.m,
 plot <- plot + scale_color_discrete("user")
 plot <- plot + theme_tufte() + theme(text=element_text(family="Helvetica"))
 
-ggsave("plot_heatmapish.pdf",width=20, height=10)
+ggsave("plot_heatmapish.pdf",width=20, height=5)
+ggsave("plot_heatmapish.png",width=20, height=5)

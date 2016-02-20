@@ -49,10 +49,10 @@ def write_single_csv_entry(v,user,withuser,last_lat,last_long,out):
     dateobj = datetime.datetime.fromtimestamp(float(v['createdAt']))
     time = str(dateobj.hour) + ":" + str(dateobj.minute)
     date = str(dateobj.year) + "-" + str(dateobj.month) + "-" + str(dateobj.day)
-    out.write("swarm|" + date + "|" + time + "|" + user + "|" +
+    out.write(("swarm|" + date + "|" + time + "|" + user + "|" +
         str(v["venue"]["location"]["lat"]) + "|" +
         str(v["venue"]["location"]["lng"]) + "|" +
-        withuser + "|" + str(last_lat) + "|" + str(last_long) + "\n")
+        withuser + "|" + str(last_lat) + "|" + str(last_long) + "\n").encode('ascii', 'ignore'))
     last_lat = v["venue"]["location"]["lat"]
     last_long = v["venue"]["location"]["lng"]
     return (last_lat,last_long)
